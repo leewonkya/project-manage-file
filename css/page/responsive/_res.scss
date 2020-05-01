@@ -1,0 +1,172 @@
+$res_769: 'screen and (max-width: 575px)';
+$res_577--768: 'screen and (min-width: 575px) and (max-width: 768px)';
+$res_769--991: 'only screen and (min-width: 769px) and (max-width: 991px)';
+$res-lg: 'only screen and (min-width: 992px)';
+@mixin res_500 {
+    @media #{$res_769} {
+        @content;
+    }
+}
+
+@include res_500() {
+    .header {
+        border-bottom: none;
+        margin-bottom: 15px;
+        &-logo {
+            position: relative;
+            top: 0;
+            &__img {
+                width: auto;
+                height: 4vh;
+            }
+        }
+        &-top__search,
+        .btn--login {
+            position: absolute;
+            z-index: 999;
+            margin-top: 25px;
+        }
+        &-top__search {
+            width: 50%;
+        }
+        .move__search {
+            transform: translateY(-58px);
+            -webkit-transform: translateY(-58px);
+            -moz-transform: translateY(-58px);
+            -ms-transform: translateY(-58px);
+            -o-transform: translateY(-58px);
+        }
+        .btn--login {
+            margin-top: 80px;
+        }
+        .hide {
+            top: 5px;
+            padding: 0 0px 0 87%;
+            left: 0;
+            width: 100%;
+            height: 48vh;
+            .btn {
+                position: absolute;
+                z-index: 9999;
+                color: #6e6c6c;
+                outline: none;
+                border-radius: 4px;
+                border: 1px solid #6e6c6c;
+                padding: 3px 10px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+            }
+        }
+    }
+    .main {
+        border-top: solid 1px #29bbff;
+        #slide-bar {
+            position: absolute;
+            top: 85px;
+            left: -20px;
+            z-index: 999;
+            padding-left: 1.5rem;
+        }
+        .move-slide__bar {
+            z-index: -999;
+        }
+        .move-data {
+            transform: translateY(230px);
+            -webkit-transform: translateY(230px);
+            -moz-transform: translateY(230px);
+            -ms-transform: translateY(230px);
+            -o-transform: translateY(230px);
+        }
+        .main-tags {
+            position: absolute;
+        }
+        &-data {
+            .list-file--item--btn {
+                max-width: 50px;
+                width: 100%;
+                .btn--download {
+                    padding: 0px 2px;
+                }
+            }
+            .list-file--item--title {
+                .list-file--item--text {
+                    margin-left: 20px;
+                    font-size: 13px;
+                }
+            }
+            .list-file--item--bottom {
+                .btn--tags {
+                    font-size: 10px;
+                }
+                .col--author {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+@mixin res_575--768 {
+    @media #{$res_577--768} {
+        @content;
+    }
+}
+
+@include res_575--768() {
+    .header {
+        .header-top__search {
+            width: 95%;
+            line-height: 20px;
+        }
+        .btn--login {
+            position: relative;
+            top: -4px;
+        }
+        .header-logo__img {
+            width: 140%;
+            height: 4vh;
+        }
+    }
+    .main {
+        &-data {
+            .list-file--item--btn {
+                width: 15%;
+            }
+            .list-file--item--title {
+                padding-left: 20px;
+                .list-file--item--text {
+                    font-size: 12px;
+                }
+            }
+            .btn--link {
+                padding: 0 51px;
+            }
+        }
+    }
+}
+
+@mixin res-lg {
+    @media #{$res-lg} {
+        @content;
+    }
+}
+
+@include res-lg() {
+    .main {
+        &-data {
+            .list-file--item--btn {
+                max-width: 105px;
+                width: 100%;
+            }
+            .list-file--item--bottom {
+                .list-inline {
+                    .list-inline-block-item {
+                        margin-left: 35%;
+                    }
+                }
+            }
+        }
+    }
+}

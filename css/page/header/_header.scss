@@ -1,0 +1,54 @@
+$color-btn: #51bfc7;
+.header {
+    position: relative;
+    display: flex;
+    border-bottom: solid .5px $color-btn;
+    margin-bottom: 5px;
+    &-logo__img {
+        position: relative;
+        width: 100%;
+        top: 7px;
+    }
+    &-top__search {
+        position: relative;
+        width: 100%;
+        border: .4px solid rgb(148, 146, 146);
+        border-radius: 4px;
+        font-size: 13px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        line-height: 30px;
+        overflow: hidden;
+        padding-left: 10px;
+        margin: 5px 0;
+        background-color: rgba(225, 228, 238, 0.6);
+        outline: none;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+    .btn--login {
+        margin: 4px 0 0 0;
+        align-items: center;
+    }
+    .btn--login:focus~.main {
+        .main-data {
+            .list-file--item--text {
+                color: red;
+            }
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+#text-welcome {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
